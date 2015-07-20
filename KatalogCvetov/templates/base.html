@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {#подклюяаю шрифт от гугла для шапки    #}
     <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     {#<--Статичный файлы начало-->#}
     {% load staticfiles %}
@@ -22,7 +23,7 @@
 <div class="container">
     <!--Шапка начало-->
     <div class="shapka">
-        <div class="shapka_logo"><a href="#">Банер</a></div>
+        <a class=".shapka_logo_silka" href="{% url 'KatalogCvetov:index' %}"><div class="shapka_logo"></div></a>
         <div class="shapka_kont"><a href="#">Телефон: 8(3452)99-99-99</a></div>
         <div class="shapka_text"><a href="{% url 'KatalogCvetov:katalog' %}">Растения под заказ</a></div>
 
