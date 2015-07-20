@@ -1,0 +1,191 @@
+
+.content{
+	border: 1px solid #0A0808;
+	width: 595px;
+	height:400px;
+
+}
+	
+
+.test1{
+	border: 1px solid #B80C0F;
+	width: 40px;
+	height:40px;
+	float: left;
+}
+	
+.test2{
+	border: 1px solid #B80C0F;	
+	width: 120px;
+
+	float: left;
+	margin-left: 1px;
+}
+
+
+.test3{
+	border: 1px solid #B80C0F;
+	width: 40px;
+	/* height:40px; */
+
+	margin-left: 0px;
+	float: left;
+}
+	
+.test4{
+	border:1px solid #B80C0F;
+	width: 341px;
+	display: inline-block;
+	/* margin-left: 0px; */
+	/* float: left; */
+}
+
+.test5{
+	border:1px solid #B80C0F;
+	width: 40px;
+	height:40px;
+	}
+.test6{
+	border:1px solid #B80C0F;
+	width: 40px;
+	height:40px;
+	float: left;
+	}
+
+.test7{
+	border:1px solid #B80C0F;
+	width: auto;
+	height:40px;
+	display: block;
+	margin: 0pc 0px 0px 45px;
+	display: block;
+	}
+
+.test8{
+	border:1px solid #B80C0F;
+	width: 40px;
+	height:40px;
+	/*margin: 0px 0px 0px 50px;*/
+	}
+
+.testos{
+	display: block;
+	border: 2px solid blue;
+	width: 550px;
+	float:left;
+}
+.block_abs {
+    height:200px;
+    border:1px solid #111;
+    width:400px;
+    background-color: #fff;
+}
+.box {
+height:50px;
+    width: 50px;
+    background-color: red;
+    
+float:left;
+
+}
+.box2 {
+height:50px;
+    width: 50px;
+    background-color: blue;
+
+    float: left;
+bottom: 0;
+    
+right: 0;
+position: absolute;
+}
+.box3 {
+height:50px;
+    width: 50px;
+    background-color: orange;
+  float:left;
+
+}
+
+.content{
+    width: 982px;
+
+
+    height: 397px;
+    border: 1px solid blue;
+}
+.content .select:active .spisok{
+    display: block;
+	
+}
+.content .select:hover {
+    background-color: blue;
+	
+    color: #fff;
+    cursor: pointer;
+}
+.content .select {
+    border: 1px solid blue;
+
+    width: 110px;
+    padding: 7px;
+    height: 20px;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: visible;
+    background-color: #fff;
+    font-size: 19px;
+}
+
+.content  .spisok div:hover{
+	background-color:blue;
+	color:#fff;
+}
+.content .spisok:hover{
+	display:block;
+}
+.btn:hover {
+	background-color:#eee;
+}
+.btn {border: 1px solid #111;
+    padding: 6px 15px;
+width: 80px;text-align: center;cursor: pointer;}
+.content  .spisok{
+
+
+    display: none;
+    color: #111;
+    
+    
+
+
+    top: -1px;
+    z-index: 1;
+    position: absolute;
+    
+
+
+    padding-top: 40px;
+
+
+    left: -1px;
+    
+
+
+    box-shadow: 0px 6px 11px rgba(0,0,0,0.3);
+
+
+    border: 1px solid blue;
+    
+
+
+    background-color: transparent;
+}
+
+.content  .spisok .sp{
+    background-color: #fff;
+
+
+    padding: 3px 10px;
+    width: 104px;
+}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="col-xs-3 www" xmlns="http://www.w3.org/1999/html">123</div>
+    <div class="col-xs-3 www">
+        <h1>{{ cvetikatalog.name_rosteniya }}</h1>. Цена цветка = {{ cvetikatalog.cena }} р.
+
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+        <form action="{% url 'KatalogCvetov:vote' cvetikatalog.id %}" method="post">
+            {% csrf_token %}
+            {% for kommenti in cvetikatalog.kommentariycvetka_set.all %}
+                <input type="radio" name="kommenti" id="kommenti{{ forloop.counter }}" value="{{ kommenti.id }}" />
+                <label for="kommenti{{ forloop.counter }}">{{ kommenti.kommentariy }}</label><br />
+                <h1></h1>
+            {% endfor %}
+
+            {% for reyting in cvetikatalog.reytingcvetka_set.all %}
+                <input type="radio" name="reyting" id="reyting{{ forloop.counter }}" value="{{ reyting.id }}" />
+                <label for="reyting{{ forloop.counter }}">рейтинг цветка = {{ reyting.reyting }}</label><br />
+                <h1></h1>
+            {% endfor %}
+            <input type="submit" value="Отправить" />
+        </form>
+
+
+        <ul>
+            {% for komment in cvetikatalog.kommentariycvetka_set.all %}
+                <li>{{ komment.kommentariy }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}

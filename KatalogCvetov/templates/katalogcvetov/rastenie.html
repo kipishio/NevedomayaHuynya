@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{#левый блок начало!!!#}
+{% block kol_left %}
+    <ul>
+        {% for vidirasteniy in VidiRasteniySpisok %}
+            <li><a href="{% url 'KatalogCvetov:vidrasteniya' vidirasteniy.id %}">{{ vidirasteniy.name_vida }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+{#левый блок конец!!!#}
+
+{#правый блок начало!!!#}
+{% block right %}
+    {% if Rastenie %}
+        <div class="katalog_cvetov">
+            <div class="stroka">
+                <div class="pole_cont_name1">
+                    {{ Rastenie.name_rosteniya }}
+                </div>
+                <div class="foto">
+                    {% if Rastenie.photo %}
+                        <div class="pole_cont_foto">
+                            <img src="{{ MEDIA_URL }}{{ Rastenie.photo }}" height="200" width="200"/>
+                        </div>
+                    {% endif %}
+                    {% if RasteniePhoto %}
+                        {% for fotorasteniya in RasteniePhoto %}
+                            <div class="pole_cont_foto">
+                                <img src="{{ MEDIA_URL }}{{ fotorasteniya.photo }}" height="200" width="200"/>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                {% if Rastenie.opisanie %}
+                    <div class="pole_cont_name2">
+                        <div class="abzac">Описание:</div>
+                        {{ Rastenie.opisanie }}</div>
+                {% endif %}
+                {% if Rastenie.coderjat %}
+                    <div class="pole_cont_name3">
+                        <div class="abzac">Характиристика:</div>
+                        {{ Rastenie.coderjat }}</div>
+                {% endif %}
+                {% if Rastenie.polza %}
+                    <div class="pole_cont_name4">
+                        <div class="abzac">Польза растения:</div>
+                        {{ Rastenie.polza }}</div>
+                {% endif %}
+                {% if Rastenie.sposob_razmnogeniya %}
+                    <div class="pole_cont_name5">
+                        <div class="abzac">Способ размножения:</div>
+                        {{ Rastenie.sposob_razmnogeniya }}</div>
+                {% endif %}
+                {% if Rastenie.peresadka %}
+                    <div class="pole_cont_name6">
+                        <div class="abzac">Пересадка:</div>
+                        {{ Rastenie.peresadka }}</div>
+                {% endif %}
+                {% if Rastenie.osobennosty_uhod %}
+                    <div class="pole_cont_name7">
+                        <div class="abzac">Особенности ухода:</div>
+                        {{ Rastenie.osobennosty_uhod }}</div>
+                {% endif %}
+                {% if Rastenie.temperatera %}
+                    <div class="pole_cont_name8">
+                        <div class="abzac">Температура:</div>
+                        {{ Rastenie.temperatera }}</div>
+                {% endif %}
+                {% if Rastenie.svet %}
+                    <div class="pole_cont_name9">
+                        <div class="abzac">Свет:</div>
+                        {{ Rastenie.svet }}</div>
+                {% endif %}
+                {% if Rastenie.poliv %}
+                    <div class="pole_cont_name10">
+                        <div class="abzac">Полив:</div>
+                        {{ Rastenie.poliv }}</div>
+                {% endif %}
+                {% if Rastenie.vlajnost_vozduha %}
+                    <div class="pole_cont_name11">
+                        <div class="abzac">Влажность воздуха:</div>
+                        {{ Rastenie.vlajnost_vozduha }}</div>
+                {% endif %}
+                {% if Rastenie.pochva %}
+                    <div class="pole_cont_name12">
+                        <div class="abzac">Почва:</div>
+                        {{ Rastenie.pochva }}</div>
+                {% endif %}
+                {% if Rastenie.cena %}
+                    <div class="pole_cont_cena">
+                        <div class="abzac">Цена:</div>
+                        {{ Rastenie.cena }}р.
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    {% else %}
+        <p>нет информации</p>
+    {% endif %}
+{% endblock %}
+{#правый блок конец!!!#}
+
+{#!!! Набираем например ul  и жмем клавишу Tab на клавиатере !!!#}
+{# emmit  http://emmet.io/#}
+{#http://docs.emmet.io/cheat-sheet/#}
+{#span{s;lsfke;sksk;l}#}
+{#.roma>span.roma2>table#}
+{#span*3#}
+{#ul>li.dsa$*10#}
+{#ul>li.dsa$$$*10#}
+{#ul>li.dsa$@5*10#}
+{#ul>li.dsa$@-*10#}
+
+

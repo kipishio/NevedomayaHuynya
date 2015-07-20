@@ -1,0 +1,11 @@
+.www{
+    background-color: aliceblue;
+
+}
+.container {
+    width: 970px !important
+}
+.proverka {
+    display: block;
+    color: green;
+}

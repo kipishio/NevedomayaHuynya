@@ -1,0 +1,591 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #405F17;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #28a4c9;
+    text-decoration: underline;
+}
+
+body {
+    background-color: #ACE7F8;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.container {
+    width: 964px;
+    margin: 0 auto;
+}
+
+.shapka {
+    background: rgb(154, 217, 71);
+    width: 100%;
+    float: left;
+    margin-top: 2px;
+    border-radius: 0 12px 0 0;
+}
+
+.shapka_logo {
+    height: 147px;
+    width: 274px;
+    background: url("../img/1a.gif") no-repeat;
+    float: left;
+}
+
+.shapka_text {
+    float: left;
+    font-size: 49px;
+    margin: 40px 0 0 14px;
+    font-family: 'Lobster', cursive;
+}
+
+.shapka_text a {
+    text-decoration: none;
+    color: rgb(49, 81, 27);
+}
+
+.shapka_text a:hover {
+    text-decoration: none;
+    color: rgb(49, 81, 27);
+}
+
+.shapka_kont {
+    margin-left: 82px;
+    margin: 11px 21px 0 0;
+    float: right;
+    font-size: 20px;
+}
+
+.shapka_kont a {
+    text-decoration: none;
+}
+
+.shapka_kont a:hover {
+    text-decoration: none;
+}
+
+.top_menu_btn {
+    width: 100%;
+    height: 32px;
+    background: #7CB924;
+    text-align: center;
+    float: left;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.top_menu_btn ul {
+    display: inline-block;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.top_menu_btn ul li {
+    list-style: none;
+    float: left;
+}
+
+.top_menu_btn ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 2px 10px;
+    color: #fff;
+}
+
+.top_menu_btn ul li a:hover {
+    text-decoration: none;
+    display: block;
+    color: #030303;
+}
+
+.ctr_katalog {
+    width: 963px;
+    height: 100%;
+    border: #080808 2px;
+    background: rgb(173, 237, 249);
+    margin: 0 auto;
+    display: block;
+}
+
+.content {
+    background-color: rgba(246, 210, 105, 1);
+    width: 100%;
+    display: table-row;
+}
+
+.content_1kol {
+    background-color: rgba(248, 249, 226, 1);
+    width: 100%;
+    display: table-row;
+}
+
+.kol_left {
+    width: 233px;
+    background-color: rgb(246, 210, 105);
+    display: table-cell;
+    vertical-align: top;
+    /* float: left; */
+    border-radius: 4px 0 0 4px;
+}
+
+.kol_left .kol_left_visota {
+    min-height: 680px;
+
+    border: 1px;
+}
+
+.kol_left ul {
+    display: block;
+}
+
+.kol_left ul li {
+    list-style: none;
+}
+
+.kol_left ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 2px 10px;
+    color: #17732A;
+    font-size: 18px;
+}
+
+.kol_left ul li a:hover {
+    color: black;
+    text-decoration: underline;
+    background: #b00; /* Красный фон */      
+    box-shadow: 0 0 20px 4px #fff; /* Параметры свечения */;
+}
+
+.kol_right {
+    background-color: rgb(248, 249, 226);
+    width: 730px;
+    vertical-align: top;
+    display: table-cell;
+    border-radius: 0 4px 4px 0;
+}
+
+.kol_right .sort {
+    text-align: right;
+    /* border: 1px solid; */
+    display: block;
+    width: 100%;
+    float: left;
+    font-size: 16px;
+}
+
+.kol_right .sort .sort1 {
+    text-align: right;
+    margin: 0 15px 0 0;
+    /* border: 1px solid; */
+    display: inline-block;
+}
+
+.kol_right ul li {
+    list-style: none;
+    float: left;
+    margin: 0 72px;
+    display: block;
+}
+
+.kol_right ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 2px 10px;
+    color: #17732A;
+}
+
+.kol_right ul li a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.katalog_cvetov_shapka:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.katalog_cvetov_shapka {
+    text-decoration: none;
+    display: block;
+    padding: 6px 0;
+    color: #020202;
+    text-align: left;
+    font-weight: bold;
+}
+
+.katalog_cvetov {
+    width: 100%;
+    margin-top: 17px;
+}
+
+.katalog_cvetov .stroka {
+}
+
+.katalog_cvetov .stroka .pole {
+    display: table-cell;
+    width: 237px;
+}
+
+.katalog_cvetov .stroka0 {
+    /* border-bottom: 1px solid #111; */
+    float: left;
+    /* border: 2px solid red; */
+    /* border-left: 1px solid orange; */
+    /* padding-left: 33px; */
+    width: 100%;
+    margin: 2px 0 3px 12px;
+    font-size: 19px;
+    text-decoration: blink;
+    font-family: 'Lobster', cursive;
+}
+
+.katalog_cvetov .stroka1 {
+    border-bottom: 1px solid #111;
+    float: left;
+    /* border: 2px solid red; */
+    margin-left: 10px;
+    /* border-left: 1px solid orange; */
+    padding-left: 33px;
+}
+
+.katalog_cvetov .stroka1 .pole1 {
+    display: table-cell;
+    width: 170px;
+    height: 100px;
+    float: left;
+    /* border: 1px solid; */
+}
+
+.katalog_cvetov .stroka1 .pole2 {
+    display: table-cell;
+    width: 42px;
+    float: left;
+    /* border: 1px solid; */
+    height: 100px;
+}
+
+.katalog_cvetov .stroka1 .pole3 {
+    display: table-cell;
+    width: 100px;
+    float: left;
+}
+
+.katalog_cvetov .stroka .pole a {
+    text-decoration: none;
+
+    font-size: 18px;
+    color: rgb(34, 52, 8);
+}
+
+.katalog_cvetov .stroka .pole_cont {
+    display: block;
+    width: 100%;
+    border: 1px solid;
+}
+
+.katalog_cvetov .stroka .pole_cont a {
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(34, 52, 8);
+    border: 1px solid crimson;
+}
+
+.katalog_cvetov .stroka .pole_cont_name1 {
+    /* border: 1px solid crimson; */
+    /* float: left; */
+    display: block;
+    font-size: 18px;
+    margin-top: 10px;
+    width: auto;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.katalog_cvetov .stroka .pole_cont_name2 {
+    border-top: 1px solid rgb(129, 129, 129);
+    font-size: 18px;
+    margin: 10px 10px 0 10px;
+    text-align: justify;
+}
+
+.katalog_cvetov .stroka .pole_cont_name3 {
+    border-top: 1px solid rgb(129, 129, 129);
+    font-size: 18px;
+
+    margin: 5px 10px 0 10px;
+    padding: 6px 0 0 0;
+    text-align: justify;
+}
+
+.katalog_cvetov .stroka .pole_cont_name4 {
+    font-size: 18px;
+    margin: 5px 10px 0 10px;
+    text-align: justify;
+}
+
+.katalog_cvetov .stroka .pole_cont_name5 {
+    font-size: 18px;
+    margin: 5px 10px 0 10px;
+    text-align: justify;
+}
+
+.katalog_cvetov .stroka .pole_cont_name6 {
+    font-size: 18px;
+    margin: 5px 10px 0 10px;
+}
+
+.katalog_cvetov .stroka .pole_cont_name7 {
+    font-size: 18px;
+    margin: 5px 10px 0 10px;
+}
+
+.katalog_cvetov .stroka .pole_cont_name8 {
+    font-size: 18px;
+    margin: 5px 10px 0 10px;
+    text-align: justify;
+}
+
+.katalog_cvetov .stroka .pole_cont_name9 {
+    font-size: 18px;
+    margin: 5px 10px 0 10px;
+}
+
+.katalog_cvetov .stroka .pole_cont_name10 {
+    font-size: 18px;
+    margin: 5px 10px 0 10px;
+}
+
+.katalog_cvetov .stroka .pole_cont_name11 {
+    font-size: 18px;
+    margin: 5px 10px 0 10px;
+}
+
+.katalog_cvetov .stroka .pole_cont_name12 {
+    font-size: 18px;
+    margin: 5px 10px 0 10px;
+}
+.katalog_cvetov .stroka .pole_cont_cena {
+    font-size: 18px;
+    margin: 5px 10px 5px 10px;
+    float: right;
+}
+
+
+.katalog_cvetov .stroka .pole_cont_name2 .abzac {
+    font-size: 18px;
+    /* text-align: center; */
+    font-weight: bold;
+}
+
+.katalog_cvetov .stroka .pole_cont_name3 .abzac {
+    font-size: 18px;
+    /* text-align: center; */
+    font-weight: bold;
+}
+
+.katalog_cvetov .stroka .pole_cont_name4 .abzac {
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+    text-align: justify;
+    background-color: rgb(172, 231, 248);
+}
+
+.katalog_cvetov .stroka .pole_cont_name5 .abzac {
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+    text-align: justify;
+    background-color: rgb(172, 248, 196);
+
+}
+
+.katalog_cvetov .stroka .pole_cont_name6 .abzac {
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+    text-align: justify;
+    background-color: rgb(240, 248, 172);
+}
+
+.katalog_cvetov .stroka .pole_cont_name7 .abzac {
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+    text-align: justify;
+    background-color: rgb(248, 210, 172);
+}
+
+.katalog_cvetov .stroka .pole_cont_name8 .abzac {
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+    text-align: justify;
+    background-color: rgb(248, 172, 172);
+}
+
+.katalog_cvetov .stroka .pole_cont_name9 .abzac {
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+    text-align: justify;
+    background-color: rgb(172, 185, 248);
+}
+
+.katalog_cvetov .stroka .pole_cont_name10 .abzac {
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+    text-align: justify;
+    background-color: rgb(220, 172, 248);
+}
+
+.katalog_cvetov .stroka .pole_cont_name11 .abzac {
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+    text-align: justify;
+    background-color: rgb(248, 172, 172);
+}
+
+.katalog_cvetov .stroka .pole_cont_name12 .abzac {
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+    text-align: justify;
+    background-color: rgb(165, 216, 175);
+}
+
+.katalog_cvetov .stroka .pole_cont_cena .abzac {
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+}
+
+.katalog_cvetov .stroka .pole_cont_foto {
+    margin: 9px;
+    display: inline-block;
+    border: 1px solid rgb(124, 185, 36);
+    padding: 2px;
+}
+
+.pole_cont_foto {
+}
+
+.katalog_cvetov .stroka .foto {
+    text-align: center;
+    float: left;
+}
+
+
+.katalog_cvetov .stroka .pole a:hover {
+    text-decoration: none;
+    font-size: 18px;
+    color: #1376D9;
+}
+
+.footer {
+    background: rgb(124, 185, 36);
+    width: 100%;
+    float: left;
+    height: 39px;
+    border-radius: 4px 4px 5px 5px;
+}
+
+.footer ul {
+    font-size: 18px;
+}
+
+.footer ul li {
+    float: left;
+    margin: 0px 0 0 238px;
+    display: block;
+}
+
+li {
+}
+
+.footer ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 1px 0;
+    color: #24532E;
+}
+
+.footer ul li a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.content_inf{
+    background-color: rgb(248, 249, 226);
+    width: 100%;
+    min-height: 680px;
+    float: left;
+}
+
+.content_inf .kontakt{
+margin: 10px 0px 0px 10px;
+
+font-size: 18px;
+}
+
+.content_inf .kontakt .inf_1 {
+margin: 10px 0px 0px 10px;
+
+font-weight: bold;
+}
+
+.content_inf .kontakt .inf {
+margin: 10px 0px 0px 10px;
+
+}
+
+.content_inf .kontakt .inf_foto {
+    display: inline-block;
+    width: 100%;
+}
+/*Ã²Ã¥Ã±Ã²Ã®Ã¢Ã Ã¿ Ã°Ã Ã¬ÃªÃ */
+
+.str{
+    display: block;
+    border: 1px solid chocolate;
+    float: left;
+    width: 100%;
+}
+.qw{
+    border: 1px solid black;
+    display: inline-block;
+
+}

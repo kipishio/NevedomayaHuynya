@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    {#<--Статичный файлы начало-->#}
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>Сайт проба</title>
+    {#    <link rel="stylesheet" href="{% static 'katalogcvetov/css/bootstrap.css' %}"/>#}
+    {#    <link rel="stylesheet" type="text/css" href="{% static 'katalogcvetov/css/custom.css' %}"/>#}
+    {#    <script src="{% static 'katalogcvetov/js/jquery-1.11.3.min.js' %}"></script>#}
+    {#    <script src="{% static 'katalogcvetov/js/bootstrap.js' %}"></script>#}
+    {#    <link rel="stylesheet" type="text/css" href="{% static 'katalogcvetov/css/bootstrap.css' %}"/>#}
+    <link rel="stylesheet" type="text/css" href="{% static 'katalogcvetov/css/proba.css' %}"/>
+    {% block static %}
+
+    {% endblock %}
+    <!--Статичный файлы конец-->
+</head>
+<body>
+<!--Сайт начало-->
+<div class="container">
+    <!--Шапка начало-->
+    <div class="shapka">
+        <div class="shapka_logo"><a href="#">Банер</a></div>
+        <div class="shapka_kont"><a href="#">Телефон: 8(3452)99-99-99</a></div>
+        <div class="shapka_text"><a href="{% url 'KatalogCvetov:katalog' %}">Растения под заказ</a></div>
+
+    </div>
+    <!--Шапка конец-->
+    <!--Главное меню начало-->
+    <div class="top_menu_btn"> <!-- блок-обертка для меню -->
+        <ul>
+            <li><a href="{% url 'KatalogCvetov:index' %}">Главная</a></li>
+            <li><a href="{% url 'KatalogCvetov:katalog' %}">Каталог</a></li>
+            <li><a href="{% url 'KatalogCvetov:kontakti' %}">Контакты</a></li>
+            <li><a href="{% url 'KatalogCvetov:onas' %}">О нас</a></li>
+        </ul>
+    </div>
+    <!--Главное меню конец-->
+    {% block content_inf %}
+        <div class="content">
+            <!--Левая колонка начало-->
+            <div class="kol_left">
+                <div class="kol_left_visota">
+                    {% block kol_left %}
+
+                    {% endblock %}
+                </div>
+            </div>
+            <!--Левая колонка конец-->
+            <!--Правая колонка начало-->
+            <div class="kol_right">
+                {% block right %}
+
+                {% endblock %}
+            </div>
+            <!--Правая колонка конец-->
+
+        </div>
+    {% endblock %}
+    <!--Футер начало-->
+    <div class="footer">
+        <ul>
+            <li><a href="#">почта:</a></li>
+            <li><a href="#">права:</a></li>
+            <!--счетчик яндекс начало-->
+            <li>
+                <a href="#">
+                    <!-- Yandex.Metrika informer -->
+                    <a href="https://metrika.yandex.ru/stat/?id=31423873&amp;from=informer"
+                       target="_blank" rel="nofollow"><img
+                            src="https://mc.yandex.ru/informer/31423873/3_1_FFFFB9FF_FFFF99FF_0_pageviews"
+                            style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика"
+                            title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)"
+                            onclick="try{Ya.Metrika.informer({i:this,id:31423873,lang:'ru'});return false}catch(e){}"/></a>
+                    <!-- /Yandex.Metrika informer -->
+
+                    <!-- Yandex.Metrika counter -->
+                    <script type="text/javascript">
+                        (function (d, w, c) {
+                            (w[c] = w[c] || []).push(function () {
+                                try {
+                                    w.yaCounter31423873 = new Ya.Metrika({
+                                        id: 31423873,
+                                        clickmap: true,
+                                        trackLinks: true,
+                                        accurateTrackBounce: true
+                                    });
+                                } catch (e) {
+                                }
+                            });
+
+                            var n = d.getElementsByTagName("script")[0],
+                                    s = d.createElement("script"),
+                                    f = function () {
+                                        n.parentNode.insertBefore(s, n);
+                                    };
+                            s.type = "text/javascript";
+                            s.async = true;
+                            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                            if (w.opera == "[object Opera]") {
+                                d.addEventListener("DOMContentLoaded", f, false);
+                            } else {
+                                f();
+                            }
+                        })(document, window, "yandex_metrika_callbacks");
+                    </script>
+                    <noscript>
+                        <div><img src="https://mc.yandex.ru/watch/31423873" style="position:absolute; left:-9999px;"
+                                  alt=""/></div>
+                    </noscript>
+                    <!-- /Yandex.Metrika counter -->
+                </a>
+            </li>
+
+            <!--счетчик яндекс коенц-->
+        </ul>
+    </div>
+    <!--Футер конец-->
+</div>
+
+
+
+{% block content %}
+
+{% endblock %}
+<!--Сайт конец-->
+</div>
+</body>
+</html>
+
+{#!!! Набираем например ul  и жмем клавишу Tab на клавиатере !!!#}
+{# emmit  http://emmet.io/#}
+{#http://docs.emmet.io/cheat-sheet/#}
+{#span{s;lsfke;sksk;l}#}
+{#.roma>span.roma2>table#}
+{#span*3#}
+{#ul>li.dsa$*10#}
+{#ul>li.dsa$$$*10#}
+{#ul>li.dsa$@5*10#}
+{#ul>li.dsa$@-*10#}
