@@ -11,6 +11,7 @@ class VidiRasteniy(models.Model):
         verbose_name = "Вид растения"
         verbose_name_plural = "Вид растения"
 
+
 class CvetiKatalog(models.Model):
     """Клас модели цветка характеристики"""
     def __str__(self):
