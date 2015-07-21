@@ -27,6 +27,7 @@
         <div class="shapka_kont"><a href="#">Телефон: 8(3452)99-99-99</a></div>
         <div class="shapka_text"><a href="{% url 'KatalogCvetov:katalog' %}">Растения под заказ</a></div>
 
+
     </div>
     <!--Шапка конец-->
     <!--Главное меню начало-->
@@ -36,7 +37,17 @@
             <li><a href="{% url 'KatalogCvetov:katalog' %}">Каталог</a></li>
             <li><a href="{% url 'KatalogCvetov:kontakti' %}">Контакты</a></li>
             <li><a href="{% url 'KatalogCvetov:onas' %}">О нас</a></li>
+            <li class="poisk">
+                <div>
+                    <form action="{% url 'KatalogCvetov:katalog' %}" method="get">
+
+                        <input type="text" name="poisk" placeholder="Поиск">
+                        <input type="submit" value="Поиск">
+                    </form>
+                </div>
+            </li>
         </ul>
+
     </div>
     <!--Главное меню конец-->
     {% block content_inf %}
