@@ -3,7 +3,7 @@
 {% block content %}
     <div class="col-xs-3 www" xmlns="http://www.w3.org/1999/html">123</div>
     <div class="col-xs-3 www">
-        <h1>{{ cvetikatalog.name_rosteniya }}</h1>. Р¦РµРЅР° С†РІРµС‚РєР° = {{ cvetikatalog.cena }} СЂ.
+        <h1>{{ cvetikatalog.name_rosteniya }}</h1>. Цена цветка = {{ cvetikatalog.cena }} р.
 
         {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
@@ -17,10 +17,10 @@
 
             {% for reyting in cvetikatalog.reytingcvetka_set.all %}
                 <input type="radio" name="reyting" id="reyting{{ forloop.counter }}" value="{{ reyting.id }}" />
-                <label for="reyting{{ forloop.counter }}">СЂРµР№С‚РёРЅРі С†РІРµС‚РєР° = {{ reyting.reyting }}</label><br />
+                <label for="reyting{{ forloop.counter }}">рейтинг цветка = {{ reyting.reyting }}</label><br />
                 <h1></h1>
             {% endfor %}
-            <input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ" />
+            <input type="submit" value="Отправить" />
         </form>
 
 

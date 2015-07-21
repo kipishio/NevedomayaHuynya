@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/KatalogCvetov/static/katalogcvetov/js/test.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/KatalogCvetov/templates/katalogcvetov/detail.html" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/VodnieRozi/settings.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/templates/admin/base_site.html" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

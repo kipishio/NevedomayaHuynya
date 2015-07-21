@@ -85,7 +85,7 @@ body {
 }
 
 .shapka_kont {
-    margin-left: 82px;
+
     margin: 11px 21px 0 0;
     float: right;
     font-size: 20px;
@@ -544,7 +544,7 @@ body {
 
 .footer ul li {
     float: left;
-    margin: 0px 0 0 238px;
+    margin: 0 0 0 238px;
     display: block;
 }
 
@@ -571,19 +571,19 @@ li {
 }
 
 .content_inf .kontakt{
-margin: 10px 0px 0px 10px;
+margin: 10px 0 0 10px;
 
 font-size: 18px;
 }
 
 .content_inf .kontakt .inf_1 {
-margin: 10px 0px 0px 10px;
+margin: 10px 0 0 10px;
 
 font-weight: bold;
 }
 
 .content_inf .kontakt .inf {
-margin: 10px 0px 0px 10px;
+margin: 10px 0 0 10px;
 
 }
 
@@ -591,7 +591,7 @@ margin: 10px 0px 0px 10px;
     display: inline-block;
     width: 100%;
 }
-/*Ã²Ã¥Ã±Ã²Ã®Ã¢Ã Ã¿ Ã°Ã Ã¬ÃªÃ */
+
 
 .str{
     display: block;
@@ -602,5 +602,5 @@ margin: 10px 0px 0px 10px;
 .qw{
     border: 1px solid black;
     display: inline-block;
-/*;жопа*/
+
 }
