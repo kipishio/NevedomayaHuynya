@@ -10,8 +10,6 @@ $(document).ready(function(){
 
     })
 
-
-
  var elem = $('.wqewq .se').find('.we2')
 
 
@@ -69,7 +67,37 @@ $(document).ready(function(){
     // .next() переходит к следующему
     $('.se').next().remove()
 
-     $('.se').eq(4)
+    $('.se').eq(4)
+
+    $('.kont').remove()
+
+
+    $('.sli').css({width:"95px", 'border':"1px solid red",    height:"27px",    margin:"10px 0 0 153px",
+        padding: "2px 6px 1px 6px", 'font-size':'20px'})
+
+    $('.sli .spmahini').css({margin: '6px 0 0 0'})
+    $(".sli .spmahini .sl").css({margin: '5px 0 0 0', 'font-size': '20px', 'display':'none'})
+
+    $('.sli').on('click',function(){
+        $(".sli .spmahini .sl").css({'display':'block'})
+    })
+
+    $('.sli .spmahini .sl').hover(
+    $(".sli .spmahini .sl").css({'color': 'blue'})
+    )
+
+    $('.sli .spmahini .sl').hover(
+    $(".sli .spmahini .sl").css({'color': 'blue'})
+    )
+
+    $('.sli .spmahini .sl').hover(
+        function(){
+            $(".sli .spmahini .sl").css({'color': 'blue'})
+        },
+        function(){
+            $(".sli .spmahini .sl").css({'color': 'red'})
+        }
+    )
 
 
 })

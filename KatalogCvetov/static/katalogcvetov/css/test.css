@@ -154,12 +154,18 @@ width: 80px;text-align: center;cursor: pointer;}
 
 
     display: none;
+    
+
+
     color: #111;
     
     
 
 
     top: -1px;
+    
+
+
     z-index: 1;
     position: absolute;
     
@@ -189,3 +195,22 @@ width: 80px;text-align: center;cursor: pointer;}
     padding: 3px 10px;
     width: 104px;
 }
+
+/*.sli {*/
+    /* width: 95px; */
+    /* border: 1px solid red; */
+    /* height: 27px; */
+    /* margin: 10px 0 0 153px; */
+    /* padding: 2px 6px 1px 6px; */
+    /* font-size: 20px; */
+/*}*/
+/*.sli .spmahini{*/
+    /* margin: 6px 0 0 0; */
+
+/*}*/
+
+/*.sli .spmahini .sl{*/
+    /* margin: 5px 0 0 0; */
+    /**/
+    /* font-size: 20px; */
+/*}*/
