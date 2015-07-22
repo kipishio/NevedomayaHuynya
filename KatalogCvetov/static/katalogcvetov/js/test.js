@@ -76,26 +76,80 @@ $(document).ready(function(){
         padding: "2px 6px 1px 6px", 'font-size':'20px'})
 
     $('.sli .spmahini').css({margin: '6px 0 0 0'})
-    $(".sli .spmahini .sl").css({margin: '5px 0 0 0', 'font-size': '20px', 'display':'none'})
+
+    $(".sli .spmahini .sl").css(
+        $('.sl1').css({margin: '5px 0 0 0', 'font-size': '20px', 'display':'none'}),
+        $('.sl2').css({margin: '5px 0 0 0', 'font-size': '20px', 'display':'none'}),
+        $('.sl3').css({margin: '5px 0 0 0', 'font-size': '20px', 'display':'none'}),
+        $('.sl4').css({margin: '5px 0 0 0', 'font-size': '20px', 'display':'none'})
+    )
 
     $('.sli').on('click',function(){
-        $(".sli .spmahini .sl").css({'display':'block'})
+        $(".sli .spmahini .sl1").css({'display':'block'}),
+        $(".sli .spmahini .sl2").css({'display':'block'}),
+        $(".sli .spmahini .sl3").css({'display':'block'}),
+        $(".sli .spmahini .sl4").css({'display':'block'}),
+        $(".sli .spmahini").css({'display':'block'})
+
     })
 
-    $('.sli .spmahini .sl').hover(
-    $(".sli .spmahini .sl").css({'color': 'blue'})
-    )
 
-    $('.sli .spmahini .sl').hover(
-    $(".sli .spmahini .sl").css({'color': 'blue'})
-    )
-
-    $('.sli .spmahini .sl').hover(
+    $('.sli .spmahini .sl1').hover(
         function(){
-            $(".sli .spmahini .sl").css({'color': 'blue'})
+            $(".sli .spmahini .sl1").css({'color': 'blue'})
+            //$(".sli .spmahini .sl2").css({'color': 'blue'}),
+            //$(".sli .spmahini .sl3").css({'color': 'blue'}),
+            //$(".sli .spmahini .sl4").css({'color': 'blue'})
         },
         function(){
-            $(".sli .spmahini .sl").css({'color': 'red'})
+            $(".sli .spmahini .sl1").css({'color': 'black'})
+            //$(".sli .spmahini .sl2").css({'color': 'red'}),
+            //$(".sli .spmahini .sl3").css({'color': 'red'}),
+            //$(".sli .spmahini .sl4").css({'color': 'red'})
+        }
+    )
+
+    //$('.sli .spmahini').hover(
+    //    function(){
+    //        $(".sli .spmahini ").css({'display':'block '})
+    //    },
+    //    function(){
+    //        $(".sli .spmahini").css({'display':'none'})
+    //    }
+    //)
+
+    $('.sli .spmahini .sl2').hover(
+        function(){
+            $(".sli .spmahini .sl2").css({'color': 'blue'})
+        },
+        function(){
+            $(".sli .spmahini .sl2").css({'color': 'black'})
+        }
+    )
+    $('.sli .spmahini .sl3').hover(
+        function(){
+            $(".sli .spmahini .sl3").css({'color': 'blue'})
+        },
+        function(){
+            $(".sli .spmahini .sl3").css({'color': 'black'})
+        }
+    )
+
+    $('.sli .spmahini .sl4').hover(
+        function(){
+            $(".sli .spmahini .sl4").css({'color': 'blue'})
+        },
+        function(){
+            $(".sli .spmahini .sl4").css({'color': 'black'})
+        }
+    )
+
+    $('.sli .spmahini').hover(
+        function(){
+            $(".sli .spmahini ").css({'display':'block '})
+        },
+        function(){
+            $('.sli .spmahini').css({'display':'none'})
         }
     )
 
