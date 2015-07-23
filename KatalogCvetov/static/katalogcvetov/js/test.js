@@ -15,16 +15,18 @@ $(document).ready(function(){
 
     elem.remove()
 
-    // .remove() удаляет тег с html страницы полностью
+    // .remove() удаляет тег с html страницы полностью не вернуть только если перезагрузить страницу
     $('.wqewq .we').remove()
     // .hide() сделает  display:none тоесть скроет элемент на странице
     $('.wqewq .we1').hide()
 
-     $('.wqewq .we1').fadeOut()
+    //плавное скроет элемент
+    $('.wqewq .we1').fadeOut()
 
     // .show() покажет элемент на странице если он был скрыт если был display:none
     $('.wqewq .we3').show()
 
+    //плавно покажет элемент
     $('.wqewq .we1').fadeIn()
 
 
@@ -66,23 +68,13 @@ $(document).ready(function(){
     $('.se').parent().find('.erw')
     // .next() переходит к следующему
     $('.se').next().remove()
-
+    //определяет количество класов .se и к 4-му элементу с классом применяет любое дей-е в данном случае стиль
     $('.se').eq(4)
+    $('.se').eq(4).css({'color':'red'})
+
+
 
     $('.kont').remove()
-
-
-    $('.sli').css({width:"95px", 'border':"1px solid red",    height:"27px",    margin:"10px 0 0 153px",
-        padding: "2px 6px 1px 6px", 'font-size':'20px'})
-
-    $('.sli .spmahini').css({margin: '6px 0 0 0'})
-
-    $(".sli .spmahini .sl").css(
-        $('.sl1').css({margin: '5px 0 0 0', 'font-size': '20px', 'display':'none'}),
-        $('.sl2').css({margin: '5px 0 0 0', 'font-size': '20px', 'display':'none'}),
-        $('.sl3').css({margin: '5px 0 0 0', 'font-size': '20px', 'display':'none'}),
-        $('.sl4').css({margin: '5px 0 0 0', 'font-size': '20px', 'display':'none'})
-    )
 
     $('.sli').on('click',function(){
         $(".sli .spmahini .sl1").css({'display':'block'}),
@@ -97,26 +89,11 @@ $(document).ready(function(){
     $('.sli .spmahini .sl1').hover(
         function(){
             $(".sli .spmahini .sl1").css({'color': 'blue'})
-            //$(".sli .spmahini .sl2").css({'color': 'blue'}),
-            //$(".sli .spmahini .sl3").css({'color': 'blue'}),
-            //$(".sli .spmahini .sl4").css({'color': 'blue'})
         },
         function(){
             $(".sli .spmahini .sl1").css({'color': 'black'})
-            //$(".sli .spmahini .sl2").css({'color': 'red'}),
-            //$(".sli .spmahini .sl3").css({'color': 'red'}),
-            //$(".sli .spmahini .sl4").css({'color': 'red'})
         }
     )
-
-    //$('.sli .spmahini').hover(
-    //    function(){
-    //        $(".sli .spmahini ").css({'display':'block '})
-    //    },
-    //    function(){
-    //        $(".sli .spmahini").css({'display':'none'})
-    //    }
-    //)
 
     $('.sli .spmahini .sl2').hover(
         function(){
@@ -152,6 +129,57 @@ $(document).ready(function(){
             $('.sli .spmahini').css({'display':'none'})
         }
     )
+
+    //при наведении на кнопку
+    $('.kn5').hover(
+        //ничего не происходит, пустая функция,
+        function(){
+            },
+        //а когда убираем курсор с объекта  поле исчезает
+        function(){
+            //$('.kn5 .kn_spisok').css({'display':'none'}) //быстро исчезнет
+         }
+
+    )
+    //создаем переменную ff
+    var ff= $('.kn5 .kn_spisok .kn_ka')
+
+    //с помощю переменной делаем функцию hover
+    ff.hover(
+        function(){ //цвет при наведении на конкретный элемент this
+            $(this).css({'background-color': 'rgb(16, 126, 55)'})
+        },
+        function(){ //цвет когда отвели крсор
+            $(this).css({ 'background-color': 'rgb(203, 240, 216)'})
+        }
+    )
+    $(document).on("click",function(){
+
+           $('.kn_spisok').fadeOut().removeClass('open') //медлено исчезнет
+
+    })
+    //когда кликаем проверяем
+    $('.kn5').on('click', function(e){
+
+        var spisok =  $('.kn_spisok',this) //ищем класс .kn_spisik  в this-('это у нас выделенный  .kn5)
+
+
+        e.stopPropagation()      //если клик срабатывает в нескольких метсах то эта функция останавливает действиетут(всплываение событий)
+
+        spisok.not('.open').show().css({opacity:0,top:0}).animate({opacity:1,top:21},500)   //медленно покажет если не кликали, проверка если нет класса .open то выполнять
+
+        spisok.addClass('open') //добавляем класс .open рядом с классом kn_spisok
+
+
+        //$('.kn_ka').show()  //сразу покажет
+        $('.kn_ka').eq(2).css({'color':'red'})//находим 2-й класс .kn_ka и меняем ему стиль на красный
+        // $('.kn_spisok').show()  //показываем объект
+        //  $('.kn_ka').hide()      //скрывает резко
+    })
+
+    $('.kn5 .kn_spisok .kn_ka').on('click',function(){
+        $(this).show()
+    })
 
 
 })
