@@ -155,7 +155,12 @@ $(document).ready(function(){
     )
     $(document).on("click",function(){
 
-           $('.kn_spisok').fadeOut().removeClass('open') //медлено исчезнет
+        $('.kn_spisok').fadeOut().removeClass('open') //медлено исчезнет
+        $('.kn1').fadeOut()
+        $('.kn2').fadeOut()
+        $('.kn3').fadeOut()
+        $('.kn4').fadeOut()
+        $('.kn6').fadeOut()
 
     })
     //когда кликаем проверяем
@@ -178,8 +183,100 @@ $(document).ready(function(){
     })
 
     $('.kn5 .kn_spisok .kn_ka').on('click',function(){
-        $(this).show()
+        if($(this).not('.open')) {
+            if ($(this).is('.kn_ka1')) {
+                $('.kn1').show().css({opacity: 0}).animate({opacity: 1}, 500)
+                $('.kn2').fadeOut()
+                $('.kn3').fadeOut()
+                $('.kn4').fadeOut()
+                $('.kn6').fadeOut()
+                $(this).addClass('open')
+            }
+        }
+
+        if($(this).is('.kn_ka2')){
+            $('.kn2').show().css({opacity:0}).animate({opacity:1},500)
+            $('.kn1').fadeOut()
+            $('.kn3').fadeOut()
+            $('.kn4').fadeOut()
+            $('.kn6').fadeOut()
+        }
+        if($(this).is('.kn_ka3')){
+            $('.kn3').show().css({opacity:0}).animate({opacity:1},500)
+            $('.kn1').fadeOut()
+            $('.kn2').fadeOut()
+            $('.kn4').fadeOut()
+            $('.kn6').fadeOut()
+
+        }
+        if($(this).is('.kn_ka4')){
+            $('.kn4').show().css({opacity:0}).animate({opacity:1},500)
+            $('.kn1').fadeOut()
+            $('.kn2').fadeOut()
+            $('.kn3').fadeOut()
+            $('.kn6').fadeOut()
+        }
+        if($(this).is('.kn_ka6')){
+            $('.kn6').show().css({opacity:0}).animate({opacity:1},500)
+            $('.kn1').fadeOut()
+            $('.kn2').fadeOut()
+            $('.kn3').fadeOut()
+            $('.kn4').fadeOut()
+
+        }
     })
+    $('.kn1 .kn_ka1').hover(
+        function(){
+           $(this).css({'background-color': 'rgb(16, 126, 55)'})
+        },
+        function(){
+            $(this).css({'background-color': 'rgb(203, 240, 216)'})
+
+        }
+
+    )
+    $('.kn2 .kn_ka2').hover(
+        function(){
+           $(this).css({'background-color': 'rgb(16, 126, 55)'})
+        },
+        function(){
+            $(this).css({'background-color': 'rgb(203, 240, 216)'})
+
+        }
+
+    )
+    $('.kn3 .kn_ka3').hover(
+        function(){
+           $(this).css({'background-color': 'rgb(16, 126, 55)'})
+        },
+        function(){
+            $(this).css({'background-color': 'rgb(203, 240, 216)'})
+
+        }
+
+    )
+
+    $('.kn4 .kn_ka4').hover(
+        function(){
+           $(this).css({'background-color': 'rgb(16, 126, 55)'})
+        },
+        function(){
+            $(this).css({'background-color': 'rgb(203, 240, 216)'})
+
+        }
+
+    )
+
+    $('.kn6 .kn_ka6').hover(
+        function(){
+           $(this).css({'background-color': 'rgb(16, 126, 55)'})
+        },
+        function(){
+            $(this).css({'background-color': 'rgb(203, 240, 216)'})
+
+        }
+
+    )
 
 
 })

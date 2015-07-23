@@ -307,7 +307,7 @@ width: 80px;text-align: center;cursor: pointer;}
     top: 21px;
     width: 100%;
     background-color: rgb(203, 240, 216);
-    display: block;
+    display: none;
 }
 
 .kn5:hover{
@@ -321,6 +321,7 @@ width: 80px;text-align: center;cursor: pointer;}
     font-size: small;
     margin: 2px -1px 0 -1px;
     padding: 0 0 0 6px;
+    display: block;
 }
 
 
