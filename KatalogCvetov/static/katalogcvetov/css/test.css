@@ -292,10 +292,11 @@ width: 80px;text-align: center;cursor: pointer;}
     border: 1px solid black;
 
     position: relative;
-    padding: 0 0px 0 0;
-    margin: 4px 7px 2px 7px;
+    padding: 0px 0px 0 0;
+    margin: 4px 7px 0 7px;
     font-size: large;
     text-align: center;
+    cursor: pointer;
 }
 
 .kn5 .kn_spisok{
@@ -310,154 +311,134 @@ width: 80px;text-align: center;cursor: pointer;}
     display: none;
 }
 
-.kn5:hover{
+.kn5:hover, .kn_ka:hover{
     background-color: #23527c;
+color:#fff !important;
 }
-
+.kn_spisok.open {
+    display: block !important;
+}
 .kn_spisok .kn_ka{
     border: 1px solid red;
-	
+	color:#333;
     text-align: left;
     font-size: small;
     margin: 2px -1px 0 -1px;
+    position: relative;
     padding: 0 0 0 6px;
     display: block;
+    cursor: pointer;
 }
 
+.kn5 .kn_spisok .kn5 .kn_spisok, .kn5 .kn_spisok .kn_ka .kn_spisok{
+    top: -3px !important;
 
+    z-index: 2;
+    left: 120px;
+}
 
+.pusk{
+    border: 1px solid rgb(199, 16, 162);
+    
+    text-align: center;
+    margin: 4px 7px 0 7px;
+    font-size: larger;
+    position: relative;
+    z-index: 1;
+}
+.pusk:hover{
+    background: #ffbcec;
+}
 
-.kn1{
+.pusk ul{
+    /* border: 1px solid red; */
+    
     position: absolute;
-
-
-    top: 21px;
-    left: -63px;
+    top: 22px;
+    left: -1px;
+    background-color: rgb(216, 217, 229);
+    padding: 0;
+    width: 120px;
+    margin: 0px 0px 0px 0;
+    z-index: 2;
     display: none;
 }
 
-.kn1 .kn_ka1{
-	  border: 1px solid red;
-
-    text-align: left;
-    font-size: small;
-
-	  margin: 2px 0 0 -5px;
-
-	  padding: 0 0 0 6px;
-
-	  width: 60px;
-	  background-color: rgb(203, 240, 216);
-	  display: block;
-	  top: 0px;
-	  left: 0;
-	  position: relative;
-}
-
-.kn2{
-    position: absolute;
-
-
-    top: 41px;
-    left: -63px;
+.pusk ul li ul{
+    left: 118px;
+    top: 0px;
     display: none;
-}
-
-.kn2 .kn_ka2{
-	  border: 1px solid red;
-
-    text-align: left;
-    font-size: small;
-
-	  margin: 2px 0 0 -5px;
-
-	  padding: 0 0 0 6px;
-
-	  width: 60px;
-	  background-color: rgb(203, 240, 216);
-	  display: block;
-	  top: 0px;
-	  left: 0;
-	  position: relative;
-}
-
-.kn3{
     position: absolute;
-
-
-    top: 61px;
-    left: -63px;
-    display: none;
 }
 
-.kn3 .kn_ka3{
-	  border: 1px solid red;
+.pusk li{
 
-    text-align: left;
-    font-size: small;
+    border: 1px solid black;
+    
 
-	  margin: 2px 0 0 -5px;
+    list-style-type: none;
 
-	  padding: 0 0 0 6px;
+    position: relative;
 
-	  width: 60px;
-	  background-color: rgb(203, 240, 216);
-	  display: block;
-	  top: 0px;
-	  left: 0;
-	  position: relative;
 }
 
-.kn4{
+.pusk li:hover{
+    background-color: rgb(253, 185, 185);
+}
+
+.pusk .open {
+    display: block !important;
+}
+
+.slider{
+    /*bottom: 1px solid red;*/
+    width: 400px;
+    height: 300px;
+    border: 1px solid #000;
+    float: left;
+    background-color: #666;
     position: absolute;
-
-
-    top: 81px;
-    left: -63px;
-    display: none;
+    top: 34px;
+    left: 444px;
 }
 
-.kn4 .kn_ka4{
-	  border: 1px solid red;
-
-    text-align: left;
-    font-size: small;
-
-	  margin: 2px 0 0 -5px;
-
-	  padding: 0 0 0 6px;
-
-	  width: 60px;
-	  background-color: rgb(203, 240, 216);
-	  display: block;
-	  top: 0px;
-	  left: 0;
-	  position: relative;
-}
-
-.kn6{
+.slider .left{
+    height: 100%;
+    border: 1px #FFF solid;
+    width: 32px;
     position: absolute;
-
-
-    top: 101px;
-    left: -63px;
-    display: none;
+    top: 0;
+    left: 0;
 }
 
-.kn6 .kn_ka6{
-	  border: 1px solid red;
+.slider .cont{
+    position: absolute;
+  
+    top: 0;
+    left: 32px;
+    width: 333px;
+    height: 241px;
+    border: 1px solid #fff;
+}
 
-    text-align: left;
-    font-size: small;
+.slider .right{
+ position: absolute;
 
-	  margin: 2px 0 0 -5px;
+    border: 1px solid #fff;
+    height: 100%;
+    width: 32px;
+    top: 0;
+    right: 0;
+}
 
-	  padding: 0 0 0 6px;
+.slider .bottom{
 
-	  width: 60px;
-	  background-color: rgb(203, 240, 216);
-	  display: block;
-	  top: 0px;
-	  left: 0;
-	  position: relative;
+}
+
+.slider .ramka{
+    border: 1px solid #f6f6f6;
+    height: 241px;
+    width: 100%;
+    margin: 0 0 0 0;
+    position: relative;
 }

@@ -142,142 +142,38 @@ $(document).ready(function(){
 
     )
     //создаем переменную ff
-    var ff= $('.kn5 .kn_spisok .kn_ka')
-
-    //с помощю переменной делаем функцию hover
-    ff.hover(
-        function(){ //цвет при наведении на конкретный элемент this
-            $(this).css({'background-color': 'rgb(16, 126, 55)'})
-        },
-        function(){ //цвет когда отвели крсор
-            $(this).css({ 'background-color': 'rgb(203, 240, 216)'})
-        }
-    )
+    //var ff= $('.kn5, .kn_ka')
+    //
+    ////с помощю переменной делаем функцию hover
+    //ff.hover(
+    //    function(){ //цвет при наведении на конкретный элемент this
+    //        $(this).css({'background-color': 'rgb(16, 126, 55)'})
+    //    },
+    //    function(){ //цвет когда отвели крсор
+    //        $(this).css({ 'background-color': 'rgb(203, 240, 216)'})
+    //    }
+    //)
     $(document).on("click",function(){
 
-        $('.kn_spisok').fadeOut().removeClass('open') //медлено исчезнет
-        $('.kn1').fadeOut()
-        $('.kn2').fadeOut()
-        $('.kn3').fadeOut()
-        $('.kn4').fadeOut()
-        $('.kn6').fadeOut()
+        $('.kn_spisok').removeClass('open')
+        $('.pusk ul').removeClass('open')
 
     })
     //когда кликаем проверяем
-    $('.kn5').on('click', function(e){
+    $('.kn5, .kn_ka').on('click', function(e){
 
-        var spisok =  $('.kn_spisok',this) //ищем класс .kn_spisik  в this-('это у нас выделенный  .kn5)
-
-
-        e.stopPropagation()      //если клик срабатывает в нескольких метсах то эта функция останавливает действиетут(всплываение событий)
-
-        spisok.not('.open').show().css({opacity:0,top:0}).animate({opacity:1,top:21},500)   //медленно покажет если не кликали, проверка если нет класса .open то выполнять
-
-        spisok.addClass('open') //добавляем класс .open рядом с классом kn_spisok
+        $(this).parent().find('.open').removeClass('open')
+        $('.kn_spisok',this).first().addClass('open')
+        e.stopPropagation()
+       })
 
 
-        //$('.kn_ka').show()  //сразу покажет
-        $('.kn_ka').eq(2).css({'color':'red'})//находим 2-й класс .kn_ka и меняем ему стиль на красный
-        // $('.kn_spisok').show()  //показываем объект
-        //  $('.kn_ka').hide()      //скрывает резко
+    $('.pusk, li').on('click', function(e){
+
+        $(this).parent().find('.open').removeClass('open')
+        $('ul',this).first().addClass('open')
+        e.stopPropagation()
     })
-
-    $('.kn5 .kn_spisok .kn_ka').on('click',function(){
-        if($(this).not('.open')) {
-            if ($(this).is('.kn_ka1')) {
-                $('.kn1').show().css({opacity: 0}).animate({opacity: 1}, 500)
-                $('.kn2').fadeOut()
-                $('.kn3').fadeOut()
-                $('.kn4').fadeOut()
-                $('.kn6').fadeOut()
-                $(this).addClass('open')
-            }
-        }
-
-        if($(this).is('.kn_ka2')){
-            $('.kn2').show().css({opacity:0}).animate({opacity:1},500)
-            $('.kn1').fadeOut()
-            $('.kn3').fadeOut()
-            $('.kn4').fadeOut()
-            $('.kn6').fadeOut()
-        }
-        if($(this).is('.kn_ka3')){
-            $('.kn3').show().css({opacity:0}).animate({opacity:1},500)
-            $('.kn1').fadeOut()
-            $('.kn2').fadeOut()
-            $('.kn4').fadeOut()
-            $('.kn6').fadeOut()
-
-        }
-        if($(this).is('.kn_ka4')){
-            $('.kn4').show().css({opacity:0}).animate({opacity:1},500)
-            $('.kn1').fadeOut()
-            $('.kn2').fadeOut()
-            $('.kn3').fadeOut()
-            $('.kn6').fadeOut()
-        }
-        if($(this).is('.kn_ka6')){
-            $('.kn6').show().css({opacity:0}).animate({opacity:1},500)
-            $('.kn1').fadeOut()
-            $('.kn2').fadeOut()
-            $('.kn3').fadeOut()
-            $('.kn4').fadeOut()
-
-        }
-    })
-    $('.kn1 .kn_ka1').hover(
-        function(){
-           $(this).css({'background-color': 'rgb(16, 126, 55)'})
-        },
-        function(){
-            $(this).css({'background-color': 'rgb(203, 240, 216)'})
-
-        }
-
-    )
-    $('.kn2 .kn_ka2').hover(
-        function(){
-           $(this).css({'background-color': 'rgb(16, 126, 55)'})
-        },
-        function(){
-            $(this).css({'background-color': 'rgb(203, 240, 216)'})
-
-        }
-
-    )
-    $('.kn3 .kn_ka3').hover(
-        function(){
-           $(this).css({'background-color': 'rgb(16, 126, 55)'})
-        },
-        function(){
-            $(this).css({'background-color': 'rgb(203, 240, 216)'})
-
-        }
-
-    )
-
-    $('.kn4 .kn_ka4').hover(
-        function(){
-           $(this).css({'background-color': 'rgb(16, 126, 55)'})
-        },
-        function(){
-            $(this).css({'background-color': 'rgb(203, 240, 216)'})
-
-        }
-
-    )
-
-    $('.kn6 .kn_ka6').hover(
-        function(){
-           $(this).css({'background-color': 'rgb(16, 126, 55)'})
-        },
-        function(){
-            $(this).css({'background-color': 'rgb(203, 240, 216)'})
-
-        }
-
-    )
-
 
 })
 
