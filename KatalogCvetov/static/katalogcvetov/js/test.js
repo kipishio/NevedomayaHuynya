@@ -72,7 +72,9 @@ $(document).ready(function(){
     $('.se').eq(4)
     $('.se').eq(4).css({'color':'red'})
 
-
+    //--------------Тестирование----------------------------------------
+    //вывод информации в консоль
+    console.log('Captain’s Log') // выводит “Captain’s Log” в панель консоли
 
     $('.kont').remove()
 
@@ -174,6 +176,24 @@ $(document).ready(function(){
         $('ul',this).first().addClass('open')
         e.stopPropagation()
     })
+
+    var nomber = 2
+    $('.ri_knopka').on('click' , function(){
+        if (nomber!=0) {
+            $('img').eq(nomber).animate({'margin': '0 399px 0 0'}, 700)
+            nomber = nomber - 1
+            console.log(nomber)
+        }
+        else nomber=nomber+1
+    })
+    $('.le_knopka').on('click' , function(){
+        console.log(nomber )
+        $('img').eq(nomber).animate({'margin': '0 0 0 0'},700)
+        nomber = nomber + 1
+
+    })
+    console.log('Captain’s Log')
+
 
 })
 
