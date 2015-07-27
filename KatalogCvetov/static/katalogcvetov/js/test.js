@@ -194,6 +194,43 @@ $(document).ready(function(){
     })
     console.log('Captain’s Log')
 
+    //$(function(){
+        var ramka = $('.ramka'),
+            sliderContent = ramka.html(),
+            slideShirina = $('.slider').outerWidth(),            //ширина рамки
+            slideCount = $('.ramka img').length,           //количество слайдов
+            btn_prev = $('.right .ri_knopka'),              // Кнопка "назад"
+            btn_next = $('.left .le_knopka'),               // Кнопка "вперед"
+            sliderInterval = 3300,                          // Интервал смены слайдов
+            animateTime = 1000,                             // Время смены слайдов
+            course = 1,                                         // Направление движения слайдера (1 или -1)
+            margin = -slideShirina;                          // Первоначальное смещение слайдов
+        $('.ramka img:last').clone().prependTo('.ramka');         // Копия последнего слайда помещается в начало.
+        $('.ramka img').eq(1).clone().appendTo('.ramka');                  // Копия первого слайда помещается в конец.
+        $('.ramka').css({'margin-left':-slideShirina});             // Контейнер .ramka сдвигается влево на ширину одного слайда.
+
+        function nextSlide(){
+            interval = window.setInterval(animate, sliderInterval); // Запускается функция animation(), выполняющая смену слайдов.
+        }
+
+        function animate(){
+            if (margin == -slideShirina*slideCount-slideShirina){
+                $('.ramka').css({'margin-left':-slideShirina})
+                margin = -slideShirina*2
+            }else if(margin==0 && course==-1){
+                margin = -slideShirina*slideCount+slideShirina
+            }else {
+                margin = margin-slideShirina*(course)
+            }
+            ramka.animate({'marginLeft':margin}, animateTime)
+        }
+        nextSlide();
+    //})
+
+
+
+
+
 
 })
 

@@ -391,7 +391,7 @@ color:#fff !important;
 }
 
 .slider{
-    width: 398px;
+    width: 397px;
     height: 299px;
     border: 1px solid #000;
     background-color: #666;
@@ -445,9 +445,12 @@ color:#fff !important;
 .slider .ramka{
     /* border: 1px solid #f6f6f6; */
     height: 100%;
-    width: 100%;
+    width: 10000px;
     margin: 0 0 0 0;
-    position: absolute;
+    position: relative;
+    left: 0;
+    top: 0;
+    float: left;
 }
 .slider .bottom .bt_knopka{
 	position:relative;
@@ -470,11 +473,12 @@ color:#fff !important;
     height: 299px;
 	
     width: 398px;
-    position: absolute;
+    position: relative;
     top: 0px;
-    right: 0;
+    left: 0;
     display: block;
     margin: 0 0 0 0;
+    float: left;
 }
 
 .left .le_knopka{
