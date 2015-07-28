@@ -452,6 +452,9 @@ color:#fff !important;
     top: 0;
     float: left;
 }
+.slider .ramka:hover{
+    background-color: #28a4c9;
+}
 .slider .bottom .bt_knopka{
 	position:relative;
 	
@@ -468,6 +471,8 @@ color:#fff !important;
 .slider .bottom .bt_knopka:hover{
 	background-color: rgba(165, 172, 223, 1);
 }
+
+
 
 .ramka img{
     height: 299px;
@@ -515,3 +520,17 @@ color:#fff !important;
 .right .ri_knopka:hover{
  background-color: rgba(165, 172, 223, 1);	
 }
+
+.qwe{
+    position: relative;
+    
+    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+}
+
+.qwe:hover{
+    background-color: rgba(165, 55, 55, 0.46);
+	
+}
+.sli {}
