@@ -40,9 +40,9 @@ def katalog(request):
 
             if (sortvid == 'vidsortza') and (sortrost == 'rostensortza'):
                 if (poisk):
-                    CvetiKatalog_list = CvetiKatalog.objects.all().order_by("-VidiRasteniy__name_vida", "name_rosteniya").filter(name_rosteniya__icontains = poisk )
+                    cveti_katalog_list = CvetiKatalog.objects.all().order_by("-VidiRasteniy__name_vida", "name_rosteniya").filter(name_rosteniya__icontains = poisk )
                 else:
-                    CvetiKatalog_list = CvetiKatalog.objects.all().order_by("-VidiRasteniy__name_vida", "name_rosteniya")
+                    cveti_katalog_list = CvetiKatalog.objects.all().order_by("-VidiRasteniy__name_vida", "name_rosteniya")
                 sortvid = 'vidsortaz'
                 sortrost = 'rostensortza'
                 tekstvid = 'я-А'
@@ -51,9 +51,9 @@ def katalog(request):
 
             elif (sortvid == 'vidsortaz') and (sortrost == 'rostensortaz'):
                 if (poisk):
-                    CvetiKatalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "-name_rosteniya").filter(name_rosteniya__icontains = poisk)
+                    cveti_katalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "-name_rosteniya").filter(name_rosteniya__icontains = poisk)
                 else:
-                    CvetiKatalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "-name_rosteniya")
+                    cveti_katalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "-name_rosteniya")
                 sortvid = 'vidsortza'
                 sortrost = 'rostensortaz'
                 tekstvid = 'А-я'
@@ -61,9 +61,9 @@ def katalog(request):
 
             elif (sortvid == 'vidsortaz') and (sortrost == 'rostensortza'):
                 if (poisk):
-                    CvetiKatalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "name_rosteniya").filter(name_rosteniya__icontains = poisk)
+                    cveti_katalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "name_rosteniya").filter(name_rosteniya__icontains = poisk)
                 else:
-                    CvetiKatalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "name_rosteniya")
+                    cveti_katalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "name_rosteniya")
                 print('test')
                 sortvid = 'vidsortza'
                 sortrost = 'rostensortza'
@@ -72,9 +72,9 @@ def katalog(request):
 
             elif (sortvid == 'vidsortza') and (sortrost == 'rostensortaz'):
                 if (poisk):
-                     CvetiKatalog_list = CvetiKatalog.objects.all().order_by("-VidiRasteniy__name_vida", "-name_rosteniya").filter(name_rosteniya__icontains = poisk)
+                     cveti_katalog_list = CvetiKatalog.objects.all().order_by("-VidiRasteniy__name_vida", "-name_rosteniya").filter(name_rosteniya__icontains = poisk)
 
-                CvetiKatalog_list = CvetiKatalog.objects.all().order_by("-VidiRasteniy__name_vida", "-name_rosteniya")
+                cveti_katalog_list = CvetiKatalog.objects.all().order_by("-VidiRasteniy__name_vida", "-name_rosteniya")
                 print('test')
                 sortvid = 'vidsortaz'
                 sortrost = 'rostensortaz'
@@ -85,10 +85,12 @@ def katalog(request):
         if (request.GET.get('rost', False)):
 
             if (sortvid == 'vidsortza') and (sortrost == 'rostensortza'):
+
+                cveti_katalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "-name_rosteniya")
+
                 if (poisk):
-                    CvetiKatalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "-name_rosteniya").filter(name_rosteniya__icontains = poisk)
-                else:
-                    CvetiKatalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "-name_rosteniya")
+                    cveti_katalog_list = cveti_katalog_list.filter(name_rosteniya__icontains = poisk)
+
 
                 sortvid = 'vidsortza'
                 sortrost = 'rostensortaz'
@@ -98,9 +100,9 @@ def katalog(request):
 
             elif (sortvid == 'vidsortaz') and (sortrost == 'rostensortaz'):
                 if(poisk):
-                    CvetiKatalog_list = CvetiKatalog.objects.all().order_by("-VidiRasteniy__name_vida", "name_rosteniya").filter(name_rosteniya__icontains = poisk)
+                    cveti_katalog_list = CvetiKatalog.objects.all().order_by("-VidiRasteniy__name_vida", "name_rosteniya").filter(name_rosteniya__icontains = poisk)
                 else:
-                    CvetiKatalog_list = CvetiKatalog.objects.all().order_by("-VidiRasteniy__name_vida", "name_rosteniya")
+                    cveti_katalog_list = CvetiKatalog.objects.all().order_by("-VidiRasteniy__name_vida", "name_rosteniya")
                 sortvid = 'vidsortaz'
                 sortrost = 'rostensortza'
                 tekstvid = 'я-А'
@@ -108,9 +110,9 @@ def katalog(request):
 
             elif (sortvid == 'vidsortaz') and (sortrost == 'rostensortza'):
                 if (poisk):
-                    CvetiKatalog_list = CvetiKatalog.objects.all().order_by("-VidiRasteniy__name_vida", "-name_rosteniya").filter(name_rosteniya__icontains = poisk)
+                    cveti_katalog_list = CvetiKatalog.objects.all().order_by("-VidiRasteniy__name_vida", "-name_rosteniya").filter(name_rosteniya__icontains = poisk)
                 else:
-                    CvetiKatalog_list = CvetiKatalog.objects.all().order_by("-VidiRasteniy__name_vida", "-name_rosteniya")
+                    cveti_katalog_list = CvetiKatalog.objects.all().order_by("-VidiRasteniy__name_vida", "-name_rosteniya")
                 sortvid = 'vidsortaz'
                 sortrost = 'rostensortaz'
                 tekstvid = 'я-А'
@@ -118,9 +120,9 @@ def katalog(request):
 
             elif (sortvid == 'vidsortza') and (sortrost == 'rostensortaz'):
                 if (poisk):
-                    CvetiKatalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "name_rosteniya").filter(name_rosteniya__icontains = poisk)
+                    cveti_katalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "name_rosteniya").filter(name_rosteniya__icontains = poisk)
                 else:
-                    CvetiKatalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "name_rosteniya")
+                    cveti_katalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "name_rosteniya")
                 sortvid = 'vidsortza'
                 sortrost = 'rostensortza'
                 tekstvid = 'А-я'
@@ -129,17 +131,17 @@ def katalog(request):
     else:
         # KatalogCvetov = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "name_rosteniya")
         if (poisk):
-            CvetiKatalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "name_rosteniya").filter(name_rosteniya__icontains = poisk)
+            cveti_katalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "name_rosteniya").filter(name_rosteniya__icontains = poisk)
         else:
-            CvetiKatalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "name_rosteniya")
+            cveti_katalog_list = CvetiKatalog.objects.all().order_by("VidiRasteniy__name_vida", "name_rosteniya")
         sortvid = 'vidsortza'
         sortrost = 'rostensortza'
         tekstvid = 'А-я'
         tekstrost ='А-я'
         print('test3')
-    print(CvetiKatalog_list[0].coderjat)
+    # print(cveti_katalog_list[0].coderjat)
 
-    paginator = Paginator(CvetiKatalog_list, 2) # показывать 25 растений на странице
+    paginator = Paginator(cveti_katalog_list, 2) # показывать 25 растений на странице
 
     page = request.GET.get('page')
     try:
