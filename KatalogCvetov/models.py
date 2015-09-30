@@ -80,3 +80,5 @@ class ReytingCvetka(models.Model):
 
 
 
+
+

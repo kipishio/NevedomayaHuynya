@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+
+{% block kol_left %}
+
+    <ul>
+        {% for vidirasteniy in VidiRasteniySpisok %}
+            <li><a href="{% url 'KatalogCvetov:vidrasteniya' vidirasteniy.id %}">{{ vidirasteniy.name_vida }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+
+{% block right %}
+    <div class="kol_right">
+        <div class="sort">
+            <div class="sort1"><a href="{% url 'KatalogCvetov:katalog' %}?vid=vid&sortvid={{ sortvid }}&sortrost={{ sortrost }}&page={{ page }}">По видам {{ tekstvid }}</a></div>
+            <div class="sort1"><a href="{% url 'KatalogCvetov:katalog' %}?rost=rost&sortvid={{ sortvid }}&sortrost={{ sortrost }}&page={{ page }}">По ростениям {{ tekstrost }}</a></div>
+        </div>
+        {% if KatalogCvetov %}
+            <div class="katalog_cvetov">
+                {#                Группируем растения по виду растений#}
+                {% regroup KatalogCvetov by VidiRasteniy as vidirasteniy_list %}
+                {% for VidiRasteniy in vidirasteniy_list %}
+                    <div class="stroka0">
+                        {#                      выводим вид растений#}
+                        {{ VidiRasteniy.grouper }}
+                    </div>
+                    {#                    Выводим все растения конкретного вида#}
+                    {% for rastenie in VidiRasteniy.list %}
+                        <div class="stroka1">
+                            <div class="pole1">
+                                <a href="{% url 'KatalogCvetov:rastenie' rastenie.id %}">{{ rastenie.name_rosteniya }}</a>
+                            </div>
+                            <div class="pole2"><a
+                                    href="{% url 'KatalogCvetov:rastenie' rastenie.id %}">{{ rastenie.cena }}р.</a>
+                            </div>
+                            <div class="pole3"><a href="{% url 'KatalogCvetov:rastenie' rastenie.id %}">
+                                <img src="{{ MEDIA_URL }}{{ rastenie.photo }}" height="100" width="100"/>
+                            </a></div>
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>нет информации</p>
+        {% endif %}
+        <div class="sort">
+            <div class="sort1"><a href="{% url 'KatalogCvetov:katalog' %}?vid=vid&sortvid={{ sortvid }}&sortrost={{ sortrost }}&page={{ page }}">По видам {{ tekstvid }}</a></div>
+            <div class="sort1"><a href="{% url 'KatalogCvetov:katalog' %}?rost=rost&sortvid={{ sortvid }}&sortrost={{ sortrost }}&page={{ page }}">По ростениям {{ tekstrost }}</a></div>
+        </div>
+
+        <div class="str">
+            <div class="pagination">
+            <span class="step-links">
+             {% if KatalogCvetov.has_previous %}
+                <a href="{% url 'KatalogCvetov:katalog' %}?page={{ KatalogCvetov.previous_page_number }}">Назад</a>
+            {% endif %}
+
+            <span class="current">
+            Страница {{ KatalogCvetov.number }} из {{ KatalogCvetov.paginator.num_pages }}.
+            </span>
+
+            {% if KatalogCvetov.has_next %}
+                <a href="{% url 'KatalogCvetov:katalog' %}?page={{ KatalogCvetov.next_page_number }}&sortvid={{ sortvid }}$ sortrost={{ sortrost }}">вперед</a>
+            {% endif %}
+                </span>
+            </div>
+        </div>
+
+
+    </div>
+{% endblock %}
+
+
+
+
+
+{#!!! Набираем например ul  и жмем клавишу Tab на клавиатере !!!#}
+{# emmit  http://emmet.io/#}
+{#http://docs.emmet.io/cheat-sheet/#}
+{#span{s;lsfke;sksk;l}#}
+{#.roma>span.roma2>table#}
+{#span*3#}
+{#ul>li.dsa$*10#}
+{#ul>li.dsa$$$*10#}
+{#ul>li.dsa$@5*10#}
+{#ul>li.dsa$@-*10#}
