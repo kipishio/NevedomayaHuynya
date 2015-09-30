@@ -139,7 +139,7 @@ def katalog(request):
         tekstvid = 'А-я'
         tekstrost ='А-я'
         print('test3')
-    print(cveti_katalog_list[0].coderjat)
+    # print(cveti_katalog_list[0].coderjat)
 
     paginator = Paginator(cveti_katalog_list, 2) # показывать 25 растений на странице
 
